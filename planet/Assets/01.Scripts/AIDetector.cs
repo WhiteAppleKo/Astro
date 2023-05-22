@@ -143,7 +143,7 @@ public class AIDetector : MonoBehaviour
                 if (bone != null)
                 {
                     bone.X = Direction.x;
-                    bone.Y = Direction.y - 5;
+                    bone.Y = Direction.y - 1;
                 }
 
             }
