@@ -29,10 +29,9 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player")){
-        Debug.Log("Colliderd " + collision.name);
-        DisableObject();
-        //여기서 호출
+        if(collision.CompareTag("Enemy")){
+            Debug.Log("Colliderd " + collision.name);
+
         }
     }
 }

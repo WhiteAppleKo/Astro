@@ -54,6 +54,8 @@ public class FlymobAI : MonoBehaviour
     [field: SerializeField]
     public bool TargetVisible { get; private set; }
 
+    private OrbitMob OM;
+
     //타겟 식별 람다식
     public Transform Target
     {
@@ -69,8 +71,10 @@ public class FlymobAI : MonoBehaviour
     private void Start()
     {
         StartCoroutine(DetectionCoroutine());
+        OM = GetComponent<OrbitMob>();
         skeletonAnimation = GetComponent<SkeletonAnimation>();
         skeletonAnimation.AnimationState.SetAnimation(0, "Idle_Loop", true);
+        skeletonAnimation.timeScale = 1;
     }
 
     //매 프레임마다 타겟식별 체크
@@ -116,6 +120,7 @@ public class FlymobAI : MonoBehaviour
         if (Target == null || Target.gameObject.activeSelf == false || Vector2.Distance(transform.position, Target.position) > viewRadius + 1)
         {
             skeletonAnimation.AnimationState.SetAnimation(0, "Idle_Loop", true);
+            skeletonAnimation.timeScale = 1;
             Target = null;
             Debug.Log("탈출함"); // 디버그 메시지 출력
         }
@@ -132,8 +137,10 @@ public class FlymobAI : MonoBehaviour
             Target = collision.transform;
             if (Target != null)
             {
+                OM.MoveSpped(0.0f);
+                skeletonAnimation.timeScale = 0.5f;
+                skeletonAnimation.AnimationState.SetAnimation(0, "Attack", true);
                 
-
             }
             if (Time.time > nextTimeToFire)
             {

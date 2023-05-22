@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8402062083001196443}
   - component: {fileID: 8402062083001192548}
   - component: {fileID: 8402062083001196440}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Planet Size 01
   m_TagString: Planet
   m_Icon: {fileID: 0}
@@ -144,7 +144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8402062083453944229}
   - component: {fileID: 8402062083453944230}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: maxRS
   m_TagString: Untagged
   m_Icon: {fileID: 0}

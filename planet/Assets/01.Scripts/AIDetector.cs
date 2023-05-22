@@ -134,6 +134,7 @@ public class AIDetector : MonoBehaviour
             Target = collision.transform;
             if (Target != null)
             {
+                skeletonAnimation.AnimationState.SetAnimation(0, "Attack", true);
                 Vector2 TargetPos = Target.position;
                 GameObject thisObject = this.gameObject;
                 Vector2 TurretPos = thisObject.transform.position;
@@ -152,7 +153,8 @@ public class AIDetector : MonoBehaviour
                 nextTimeToFire = Time.time + 1 / FireRate;
                 shoot();
             }
-        }
+        }else
+            skeletonAnimation.AnimationState.SetAnimation(0, "Idle", true);
     }
 
     //총알 발사
