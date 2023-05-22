@@ -1370,7 +1370,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 701543946}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -48.75, y: -55.03, z: 4.012589}
+  m_LocalPosition: {x: -41.7, y: -58.96, z: 4.012589}
   m_LocalScale: {x: 0.175, y: 0.175, z: 0.175}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -2497,7 +2497,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1247371775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2752,6 +2752,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHP: 3
+  skeletonAnimation: {fileID: 0}
+  thisObject: {fileID: 0}
 --- !u!1 &1337232512
 GameObject:
   m_ObjectHideFlags: 0
@@ -3573,6 +3575,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.54509807
       objectReference: {fileID: 0}
+    - target: {fileID: 8402062083453944229, guid: d2f547d35fd0ab74d887b2d7f3e9f94a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.03
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d2f547d35fd0ab74d887b2d7f3e9f94a, type: 3}
 --- !u!1001 &6326198836095130750
@@ -3612,11 +3618,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6326198834432133078, guid: c6deb6db979527c40b13ecdf7d21d567, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.67
+      value: 3.09
       objectReference: {fileID: 0}
     - target: {fileID: 6326198834432133078, guid: c6deb6db979527c40b13ecdf7d21d567, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.92
+      value: 2.27
       objectReference: {fileID: 0}
     - target: {fileID: 6326198834432133078, guid: c6deb6db979527c40b13ecdf7d21d567, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3743,11 +3749,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9129635130861183338, guid: de3467b640108bb49a0e95d3d82f5295, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.14
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 9129635130861183338, guid: de3467b640108bb49a0e95d3d82f5295, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.63
+      value: 2.84
       objectReference: {fileID: 0}
     - target: {fileID: 9129635130861183338, guid: de3467b640108bb49a0e95d3d82f5295, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3795,7 +3801,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9129635130861183342, guid: de3467b640108bb49a0e95d3d82f5295, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9129635130861183342, guid: de3467b640108bb49a0e95d3d82f5295, type: 3}
       propertyPath: detectionCheckDelay

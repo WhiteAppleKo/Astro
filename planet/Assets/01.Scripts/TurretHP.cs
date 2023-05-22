@@ -1,11 +1,22 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using Spine.Unity;
 
 public class TurretHP : MonoBehaviour
 {
     [SerializeField]
-    public int currentHP = 20;     // 최대 체력
+    public int currentHP = 3;     // 최대 체력
+
+    public SkeletonAnimation skeletonAnimation;
+    public GameObject thisObject;
+
+
+    private void Start()
+    {
+        skeletonAnimation = GetComponent<SkeletonAnimation>();
+        
+    }
 
     void Update()
     {
@@ -16,6 +27,10 @@ public class TurretHP : MonoBehaviour
     {
         
     }
+    private void destroy()
+    {
+        Destroy(this.gameObject);
+    }
 
     public void TakeDamage(int damage)
     {
@@ -23,9 +38,10 @@ public class TurretHP : MonoBehaviour
         currentHP -= damage;
         Debug.Log("HP : " + currentHP);
 
-        // 체력이 0이 되면 게임오버
-        if (currentHP <= 0)
+        if (currentHP == 0)
         {
+            skeletonAnimation.AnimationState.SetAnimation(0, "Die", true);
+            Invoke("destroy", 0.5f); // 2초 후에 실행할 액션 지정
         }
     }
 }

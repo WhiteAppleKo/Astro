@@ -13,6 +13,8 @@ public class OrbitMob : MonoBehaviour
     [SerializeField]
     public int Gold = 1;
 
+    private int EnemyHP = 2;
+
     void start()
     {
         
@@ -29,14 +31,19 @@ public class OrbitMob : MonoBehaviour
     {
         moveSpeed = speed;
     }
-
+//    enemyController.GetComponent<EnemyController>().AttackEnemy(Damage);
+//    enemyController.GetComponent<EnemyController>().KillEnemy(Gold);
+//    Destroy(this.gameObject);
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Bullet")) {
             Debug.Log("Colliderd " + collision.name);
-            enemyController.GetComponent<EnemyController>().AttackEnemy(Damage);
-            enemyController.GetComponent<EnemyController>().KillEnemy(Gold);   
-            Destroy(this.gameObject);
-        }
+            EnemyHP -= 1;
+            if (EnemyHP == 0)
+            {
+                enemyController.GetComponent<EnemyController>().KillEnemy(Gold);
+                Destroy(this.gameObject);
+            }
+            }
     }
 }

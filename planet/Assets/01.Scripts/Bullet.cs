@@ -22,16 +22,13 @@ public class Bullet : MonoBehaviour
         
     }
 
-    private void DisableObject()
-    {
-        gameObject.SetActive(false);
-    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Enemy")){
+        if(collision.CompareTag("Enemy1")){
             Debug.Log("Colliderd " + collision.name);
-
+         //   작동안하는 코드;
         }
     }
 }

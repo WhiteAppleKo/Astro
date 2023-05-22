@@ -24,6 +24,8 @@ public class FlymobAI : MonoBehaviour
     [SerializeField]
     private Transform target;
 
+    public int damage = 1;
+
     // 플레이어 레이어 마스크
     [SerializeField]
     private LayerMask playerLayerMask;
@@ -55,6 +57,9 @@ public class FlymobAI : MonoBehaviour
     public bool TargetVisible { get; private set; }
 
     private OrbitMob OM;
+
+    private TurretHP turretHP;
+    private string name;
 
     //타겟 식별 람다식
     public Transform Target
@@ -135,8 +140,11 @@ public class FlymobAI : MonoBehaviour
         {
             
             Target = collision.transform;
+            name = collision.gameObject.name;
             if (Target != null)
             {
+                GameObject targetObject = GameObject.Find(name);
+                turretHP = targetObject.GetComponent<TurretHP>();
                 OM.MoveSpped(0.0f);
                 skeletonAnimation.timeScale = 0.5f;
                 skeletonAnimation.AnimationState.SetAnimation(0, "Attack", true);
@@ -145,7 +153,7 @@ public class FlymobAI : MonoBehaviour
             if (Time.time > nextTimeToFire)
             {
                 nextTimeToFire = Time.time + 1 / FireRate;
-                
+                turretHP.TakeDamage(damage);
             }
         }
     }
@@ -162,6 +170,6 @@ public class FlymobAI : MonoBehaviour
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
-        Gizmos.DrawWireSphere(transform.position, viewRadius);
+        Gizmos.DrawWireSphere(transform.position, viewRadius / 2);
     }
 }

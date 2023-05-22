@@ -134,6 +134,7 @@ public class AIDetector : MonoBehaviour
             Target = collision.transform;
             if (Target != null)
             {
+ //               skeletonAnimation.Skeleton.FlipX = !skeletonAnimation.Skeleton.FlipX;
                 skeletonAnimation.AnimationState.SetAnimation(0, "Attack", true);
                 Vector2 TargetPos = Target.position;
                 GameObject thisObject = this.gameObject;
