@@ -26,7 +26,7 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Enemy1")){
+        if(collision.CompareTag("Enemy")){
             Debug.Log("Colliderd " + collision.name);
          //   작동안하는 코드;
         }
