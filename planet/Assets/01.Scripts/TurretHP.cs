@@ -41,7 +41,6 @@ public class TurretHP : MonoBehaviour
         if (currentHP == 0)
         {
             skeletonAnimation.AnimationState.SetAnimation(0, "Die", true);
-            Invoke("destroy", 0.5f); // 2초 후에 실행할 액션 지정
-        }
+            Invoke("destroy", 0.5f);
     }
 }

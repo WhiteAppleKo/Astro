@@ -154,7 +154,7 @@ MonoBehaviour:
   boneName: target
   enemyTag: Player
   Direction: {x: 0, y: 0}
-  bullet: {fileID: 2335200077214125443, guid: 83be4316ed9141e44a738909c5c11f8f, type: 3}
+  bullet: {fileID: 7396569358460749578, guid: 1bf821cd779896045b098cd3f253a903, type: 3}
   FireRate: 1
   Force: 100
   <TargetVisible>k__BackingField: 0
@@ -218,5 +218,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHP: 3
-  skeletonAnimation: {fileID: 0}
-  thisObject: {fileID: 0}
+  skeletonAnimation: {fileID: 5035010214942417048}
+  thisObject: {fileID: 5035010214942417050}

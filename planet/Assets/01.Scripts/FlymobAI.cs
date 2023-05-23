@@ -59,6 +59,7 @@ public class FlymobAI : MonoBehaviour
     private OrbitMob OM;
 
     private TurretHP turretHP;
+    private RocketHP rocketHP;
     private string name;
 
     //타겟 식별 람다식
@@ -138,23 +139,40 @@ public class FlymobAI : MonoBehaviour
         Collider2D collision = Physics2D.OverlapCircle(transform.position, (viewRadius / 2), playerLayerMask);
         if (collision != null)
         {
-            
+
             Target = collision.transform;
             name = collision.gameObject.name;
             if (Target != null)
             {
                 GameObject targetObject = GameObject.Find(name);
+                Debug.Log(name);
+                
+                rocketHP = targetObject.GetComponent<RocketHP>();
+              
                 turretHP = targetObject.GetComponent<TurretHP>();
+                
                 OM.MoveSpped(0.0f);
                 skeletonAnimation.timeScale = 0.5f;
                 skeletonAnimation.AnimationState.SetAnimation(0, "Attack", true);
-                
+
             }
             if (Time.time > nextTimeToFire)
             {
                 nextTimeToFire = Time.time + 1 / FireRate;
-                turretHP.TakeDamage(damage);
+                if (name != null && name.Equals("Rocket"))
+                {
+                    rocketHP.TakeDamage(damage);
+                }
+                else
+                {
+                    turretHP.TakeDamage(damage);
+                }
             }
+        }
+        else
+        {
+            skeletonAnimation.AnimationState.SetAnimation(0, "Idle_Loop", true);
+            OM.MoveSpped(5.0f);
         }
     }
 

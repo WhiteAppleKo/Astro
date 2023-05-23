@@ -8,11 +8,12 @@ TagManager:
   - Turret
   - Enemy
   - Bullet
+  - Rocket
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Planet
   - Water
   - UI
   - Bullet

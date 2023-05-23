@@ -22,19 +22,13 @@ public class Bullet : MonoBehaviour
         
     }
 
-    private void DisableObject()
-    {
-        gameObject.SetActive(false);
-    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player")){
-        Debug.Log("Colliderd " + collision.name);
-        DisableObject();
-        collision.GetComponent<Player>().TakeDamage(damage);
-            DisableObject();
-        //ì—¬ê¸°ì„œ í˜¸ì¶œ
+        if(collision.CompareTag("Enemy")){
+            Debug.Log("Colliderd " + collision.name);
+         //   ÀÛµ¿¾ÈÇÏ´Â ÄÚµå;
         }
     }
 }
