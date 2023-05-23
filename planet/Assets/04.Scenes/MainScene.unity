@@ -3283,8 +3283,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 5035010214942417049, guid: ccfb027662e0ded46bb105c3e4ed29a7, type: 3}
+      propertyPath: FireRate
+      value: 1e+13
+      objectReference: {fileID: 0}
+    - target: {fileID: 5035010214942417049, guid: ccfb027662e0ded46bb105c3e4ed29a7, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5035010214942417049, guid: ccfb027662e0ded46bb105c3e4ed29a7, type: 3}
+      propertyPath: detectionCheckDelay
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5035010214942417050, guid: ccfb027662e0ded46bb105c3e4ed29a7, type: 3}
       propertyPath: m_Name
@@ -3296,11 +3304,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5035010214942417053, guid: ccfb027662e0ded46bb105c3e4ed29a7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.16
+      value: -0.092
       objectReference: {fileID: 0}
     - target: {fileID: 5035010214942417053, guid: ccfb027662e0ded46bb105c3e4ed29a7, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.1
+      value: 2.638
       objectReference: {fileID: 0}
     - target: {fileID: 5035010214942417053, guid: ccfb027662e0ded46bb105c3e4ed29a7, type: 3}
       propertyPath: m_LocalPosition.z
