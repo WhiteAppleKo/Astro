@@ -93,7 +93,7 @@ public class PlayerMovement : MonoBehaviour
             // Debug.Log(distance);
 
             //행성표면 착지 판별
-            if(distance < 1.7f)
+            if(distance < 3.0f)
             {
                 isGrounded = true; 
             }
