@@ -15,7 +15,7 @@ public class TurretHP : MonoBehaviour
     private void Start()
     {
         skeletonAnimation = GetComponent<SkeletonAnimation>();
-        
+
     }
 
     void Update()
@@ -25,7 +25,7 @@ public class TurretHP : MonoBehaviour
 
     private void Awake()
     {
-        
+
     }
     private void destroy()
     {
@@ -42,5 +42,6 @@ public class TurretHP : MonoBehaviour
         {
             skeletonAnimation.AnimationState.SetAnimation(0, "Die", true);
             Invoke("destroy", 0.5f);
+        }
     }
 }
