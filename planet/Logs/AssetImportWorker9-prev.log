@@ -11,13 +11,19 @@ D:\UNITY\editor\2021.3.10f1\Editor\Unity.exe
 -name
 AssetImportWorker9
 -projectPath
-D:/Program Files/Git/bin/Astro/planet
+D:/Program Files/Git/cmd/Astro/planet
 -logFile
 Logs/AssetImportWorker9.log
 -srvPort
+<<<<<<< HEAD
 57312
 Successfully changed project path to: D:/Program Files/Git/bin/Astro/planet
 D:/Program Files/Git/bin/Astro/planet
+=======
+53877
+Successfully changed project path to: D:/Program Files/Git/cmd/Astro/planet
+D:/Program Files/Git/cmd/Astro/planet
+>>>>>>> 15cb8b5de9d665058857c4cfa404f637060b70a0
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -47,11 +53,15 @@ D:/Program Files/Git/bin/Astro/planet
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
+<<<<<<< HEAD
 Refreshing native plugins compatible for Editor in 497.00 ms, found 4 plugins.
+=======
+Refreshing native plugins compatible for Editor in 314.53 ms, found 4 plugins.
+>>>>>>> 15cb8b5de9d665058857c4cfa404f637060b70a0
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2021.3.10f1 (1c7d0df0160b)
 [Subsystems] Discovering subsystems at path D:/UNITY/editor/2021.3.10f1/Editor/Data/Resources/UnitySubsystems
-[Subsystems] Discovering subsystems at path D:/Program Files/Git/bin/Astro/planet/Assets
+[Subsystems] Discovering subsystems at path D:/Program Files/Git/cmd/Astro/planet/Assets
 GfxDevice: creating device client; threaded=0; jobified=0
 Direct3D:
     Version:  Direct3D 11.0 [level 11.1]
@@ -63,14 +73,22 @@ Initialize mono
 Mono path[0] = 'D:/UNITY/editor/2021.3.10f1/Editor/Data/Managed'
 Mono path[1] = 'D:/UNITY/editor/2021.3.10f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'D:/UNITY/editor/2021.3.10f1/Editor/Data/MonoBleedingEdge/etc'
+<<<<<<< HEAD
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56884
+=======
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56864
+>>>>>>> 15cb8b5de9d665058857c4cfa404f637060b70a0
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: D:/UNITY/editor/2021.3.10f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: D:/UNITY/editor/2021.3.10f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: D:/UNITY/editor/2021.3.10f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
 Register platform support module: D:/UNITY/editor/2021.3.10f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+<<<<<<< HEAD
 Registered in 0.128040 seconds.
+=======
+Registered in 0.075525 seconds.
+>>>>>>> 15cb8b5de9d665058857c4cfa404f637060b70a0
 Native extension for WindowsStandalone target not found
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
@@ -78,6 +96,7 @@ Native extension for WindowsStandalone target not found
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WebGL target not found
+<<<<<<< HEAD
 Refreshing native plugins compatible for Editor in 382.22 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
@@ -85,11 +104,21 @@ Mono: successfully reloaded assembly
 Domain Reload Profiling:
 	ReloadAssembly (4421ms)
 		BeginReloadAssembly (810ms)
+=======
+Refreshing native plugins compatible for Editor in 530.46 ms, found 4 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  3.948 seconds
+Domain Reload Profiling:
+	ReloadAssembly (3950ms)
+		BeginReloadAssembly (551ms)
+>>>>>>> 15cb8b5de9d665058857c4cfa404f637060b70a0
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (2ms)
+<<<<<<< HEAD
 		EndReloadAssembly (2904ms)
 			LoadAssemblies (796ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
@@ -106,10 +135,29 @@ Domain Reload Profiling:
 				ProcessInitializeOnLoadMethodAttributes (283ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (1ms)
+=======
+		EndReloadAssembly (2782ms)
+			LoadAssemblies (535ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (572ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (131ms)
+			SetupLoadedEditorAssemblies (1819ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (273ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (531ms)
+				BeforeProcessingInitializeOnLoad (3ms)
+				ProcessInitializeOnLoadAttributes (502ms)
+				ProcessInitializeOnLoadMethodAttributes (509ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+>>>>>>> 15cb8b5de9d665058857c4cfa404f637060b70a0
 			ExecutionOrderSort2 (0ms)
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
+<<<<<<< HEAD
 Registered in 0.229248 seconds.
 Android Extension - Scanning For ADB Devices 14185 ms
 Begin MonoManager ReloadAssembly
@@ -121,3 +169,7 @@ Native extension for Android target not found
 Native extension for WebGL target not found
 Refreshing native plugins compatible for Editor in 563.25 ms, found 4 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
+=======
+Registered in 0.196193 seconds.
+Android Extension - Scanning For ADB Devices 13213 ms
+>>>>>>> 15cb8b5de9d665058857c4cfa404f637060b70a0

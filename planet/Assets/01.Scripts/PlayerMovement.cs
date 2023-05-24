@@ -20,6 +20,9 @@ public class PlayerMovement : MonoBehaviour
     private bool wasInputRight = false;
     private bool wasInputJump = false;
     private bool wasIdle = false;
+
+    private PlayerGold playerGold;
+    public GameObject enemySpawner;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +30,10 @@ public class PlayerMovement : MonoBehaviour
         skeletonAnimation = GetComponent<SkeletonAnimation>();
         meshRenderer = GetComponent<MeshRenderer>();
     }
+
+    
+
+    
 
     // Update is called once per frame
     void Update()
@@ -37,6 +44,20 @@ public class PlayerMovement : MonoBehaviour
             body.AddForce(transform.up * jumpPower, ForceMode2D.Impulse);
             skeletonAnimation.AnimationState.SetAnimation(0, "Jump_Loop", true);
         }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            // enemySpawner 게임 오브젝트를 활성화
+            enemySpawner.SetActive(true);
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            GameObject targetObject = GameObject.Find("Rocket");
+            skeletonAnimation.AnimationState.SetAnimation(0, "Action_Loop", true);
+            playerGold = targetObject.GetComponent<PlayerGold>();
+            playerGold.TakeGold(1);
+        }
     }
 
     // 기존 Update()함수보다 좋다고해서 사용
@@ -46,7 +67,6 @@ public class PlayerMovement : MonoBehaviour
         // 수평 이동
         horizontal = Input.GetAxisRaw("Horizontal");
         body.AddForce(transform.right * horizontal * moveSpeed);
-       
 
         // 좌우 반전
         Vector3 theScale = transform.localScale;
