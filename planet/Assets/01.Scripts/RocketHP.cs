@@ -9,20 +9,6 @@ public class RocketHP : MonoBehaviour
     [SerializeField]
     public int currentHP = 3;     // 최대 체력
 
-    private void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-
-    }
-
-    private void Awake()
-    {
-        
-    }
     private void destroy()
     {
         Destroy(this.gameObject);
