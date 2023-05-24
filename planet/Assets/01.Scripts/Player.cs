@@ -16,8 +16,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         if (health <= 0)
-        { SceneManager.LoadScene("Menu");
-        Time.timeScale = 1f;
+        {
             Debug.Log("Player ����");
         }
     }
@@ -25,6 +24,6 @@ public class Player : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-        healthBarScript.DamagePlayer();
+        healthBarScript.DamageRocket();
     }
 }
