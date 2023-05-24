@@ -28,7 +28,7 @@ public class Bullet : MonoBehaviour
     {
         if(collision.CompareTag("Enemy")){
             Debug.Log("Colliderd " + collision.name);
-         //   작동안하는 코드;
+            Destroy(this.gameObject);
         }
     }
 }

@@ -61,6 +61,7 @@ public class FlymobAI : MonoBehaviour
     private TurretHP turretHP;
     private RocketHP rocketHP;
     private string name;
+    public float moveSpeed;
 
     //타겟 식별 람다식
     public Transform Target
@@ -172,7 +173,7 @@ public class FlymobAI : MonoBehaviour
         else
         {
             skeletonAnimation.AnimationState.SetAnimation(0, "Idle_Loop", true);
-            OM.MoveSpped(5.0f);
+            OM.MoveSpped(moveSpeed);
         }
     }
 
