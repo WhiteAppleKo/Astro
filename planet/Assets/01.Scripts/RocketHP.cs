@@ -5,7 +5,7 @@ public class RocketHP : MonoBehaviour
 {
     
     public int maxHealth = 100;
- public int health ;
+    public int health ;
     private HealthBarScript healthBarScript;
 
     // 최대 체력
@@ -15,7 +15,7 @@ public class RocketHP : MonoBehaviour
     {
         // 초기화 작업 등을 수행할 수 있습니다.
         health = maxHealth;
-        healthBarScript = GameObject.Find("HealthBar").GetComponent<HealthBarScript>();
+        healthBarScript = GameObject.Find("Canvas").GetComponent<HealthBarScript>();
     }
 
     void Update()
@@ -34,10 +34,13 @@ public class RocketHP : MonoBehaviour
     public void TakeDamage(int damage)
     {
         // 현재 체력을 damage만큼 감소시킵니다.
-        health -= damage;
-        Debug.Log("RocketHP: " + health);
+        if (health > 0)
+        {
+            health -= damage;
+            Debug.Log("RocketHP: " + health);
+        }
 
-        if (health <= 0)
+        if (health == 0)
         {
             Invoke("destroy", 0.5f); // 0.5초 후에 destroy 메서드를 실행하여 로켓을 파괴합니다.
         }

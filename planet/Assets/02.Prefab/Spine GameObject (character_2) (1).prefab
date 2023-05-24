@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1329270486226752602
+--- !u!1 &7341383459449666417
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,50 +8,50 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2915734756802455271}
-  - component: {fileID: 2319080486631788849}
-  - component: {fileID: 9041051309063690837}
-  - component: {fileID: 4656170551396300937}
-  - component: {fileID: 5654674664408193997}
-  - component: {fileID: 8398884187712823939}
-  - component: {fileID: 7186912358148102399}
+  - component: {fileID: 1011013279934246519}
+  - component: {fileID: 6777502558604904808}
+  - component: {fileID: 2737312234352115047}
+  - component: {fileID: 5616715438609935665}
+  - component: {fileID: 605159912553687445}
+  - component: {fileID: 3286790026931929914}
+  - component: {fileID: 2449103319899614933}
   m_Layer: 0
-  m_Name: Spine GameObject (character_2)
+  m_Name: Spine GameObject (character_2) (1)
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2915734756802455271
+--- !u!4 &1011013279934246519
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1329270486226752602}
+  m_GameObject: {fileID: 7341383459449666417}
   m_LocalRotation: {x: 0, y: 0, z: -0.9659258, w: 0.2588191}
-  m_LocalPosition: {x: 1.95, y: -2.45, z: 0}
+  m_LocalPosition: {x: 2.16, y: -2.47, z: 0}
   m_LocalScale: {x: 0.175, y: 0.175, z: 0.175}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -150}
---- !u!33 &2319080486631788849
+--- !u!33 &6777502558604904808
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1329270486226752602}
+  m_GameObject: {fileID: 7341383459449666417}
   m_Mesh: {fileID: 0}
---- !u!23 &9041051309063690837
+--- !u!23 &2737312234352115047
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1329270486226752602}
+  m_GameObject: {fileID: 7341383459449666417}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -87,13 +87,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4656170551396300937
+--- !u!114 &5616715438609935665
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1329270486226752602}
+  m_GameObject: {fileID: 7341383459449666417}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d247ba06193faa74d9335f5481b2b56c, type: 3}
@@ -127,13 +127,13 @@ MonoBehaviour:
   _animationName: Idle_Loop
   loop: 1
   timeScale: 1
---- !u!114 &5654674664408193997
+--- !u!114 &605159912553687445
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1329270486226752602}
+  m_GameObject: {fileID: 7341383459449666417}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ace6ee90cdbb60241b3f33372b01461d, type: 3}
@@ -149,21 +149,21 @@ MonoBehaviour:
   visibilityLayer:
     serializedVersion: 2
     m_Bits: 256
-  skeletonAnimation: {fileID: 4656170551396300937}
-  thisObject: {fileID: 1329270486226752602}
+  skeletonAnimation: {fileID: 5616715438609935665}
+  thisObject: {fileID: 7341383459449666417}
   enemyTag: Player
   Direction: {x: 0, y: 0}
   FireRate: 1
   Force: 0
   <TargetVisible>k__BackingField: 0
   moveSpeed: 15
---- !u!114 &8398884187712823939
+--- !u!114 &3286790026931929914
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1329270486226752602}
+  m_GameObject: {fileID: 7341383459449666417}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d136d3075529b2b4b8a74df9680cc900, type: 3}
@@ -174,13 +174,13 @@ MonoBehaviour:
   direction: {x: 0, y: 0, z: 1}
   Damage: 1
   Gold: 1
---- !u!58 &7186912358148102399
+--- !u!58 &2449103319899614933
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1329270486226752602}
+  m_GameObject: {fileID: 7341383459449666417}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}

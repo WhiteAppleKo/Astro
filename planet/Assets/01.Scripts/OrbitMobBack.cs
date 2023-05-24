@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class OrbitMob : MonoBehaviour
+public class OrbitMobBack : MonoBehaviour
 {
     public GameObject target;
     public float moveSpeed;
@@ -22,7 +22,7 @@ public class OrbitMob : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.RotateAround(target.transform.position, direction, moveSpeed * Time.deltaTime);
+        transform.RotateAround(target.transform.position, -direction, moveSpeed * Time.deltaTime);
         enemyController = GameObject.Find("EnemyCtrl");
 
     }

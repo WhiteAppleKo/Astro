@@ -38,7 +38,15 @@ public class Garden : MonoBehaviour
             currentObject = 3;
             timer = 0f;
         }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            TransitionTo(object1);
+            timer = 0f;
+            Destroy(this.gameObject);
+        }
     }
+
+
 
     void TransitionTo(GameObject targetObject)
     {

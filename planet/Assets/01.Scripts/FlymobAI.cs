@@ -152,7 +152,7 @@ public class FlymobAI : MonoBehaviour
               
                 turretHP = targetObject.GetComponent<TurretHP>();
                 
-                OM.MoveSpped(0.0f);
+                OM.MoveSpeed(0.0f);
                 skeletonAnimation.timeScale = 0.5f;
                 skeletonAnimation.AnimationState.SetAnimation(0, "Attack", true);
 
@@ -173,7 +173,7 @@ public class FlymobAI : MonoBehaviour
         else
         {
             skeletonAnimation.AnimationState.SetAnimation(0, "Idle_Loop", true);
-            OM.MoveSpped(moveSpeed);
+            OM.MoveSpeed(moveSpeed);
         }
     }
 

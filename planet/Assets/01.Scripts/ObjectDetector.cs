@@ -11,6 +11,8 @@ public class ObjectDetector : MonoBehaviour
 
     public GameObject selectedObject;
 
+    private PlayerGold playerGold;
+
     Camera mainCamera;
     RectTransform rectTransform;
     Vector2 targetPosition;
@@ -22,6 +24,7 @@ public class ObjectDetector : MonoBehaviour
     {
         mainCamera = Camera.main;
         objectCreated = false;
+        playerGold = GameObject.Find("Rocket").GetComponent<PlayerGold>();
     }
 
     // Update is called once per frame
@@ -45,8 +48,12 @@ public class ObjectDetector : MonoBehaviour
 
     public void OnTurretButtonClicked()
     {
-        selectedObject = turret;
-        objectCreated = false;
+        if (playerGold.currentGold >= 4)
+        {
+            selectedObject = turret;
+            objectCreated = false;
+            playerGold.currentGold -= 4;
+        }
     }
 
     public void OnGardenButtonClicked()

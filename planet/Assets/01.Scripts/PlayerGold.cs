@@ -6,7 +6,12 @@ public class PlayerGold : MonoBehaviour
 {
     [SerializeField]
     public int currentGold = 3;
+    private HealthBarScript healthBarScript;
 
+    private void Start()
+    {
+        healthBarScript = GameObject.Find("Canvas").GetComponent<HealthBarScript>();
+    }
 
     public void TakeGold(int Gold)
     {

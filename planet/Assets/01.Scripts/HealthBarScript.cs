@@ -6,18 +6,21 @@ public class HealthBarScript : MonoBehaviour
 {
     public Slider healthBarSlider;
     public TextMeshProUGUI healthBarValueText;
+    public TextMeshProUGUI goldValueText;
     private RocketHP rocketHP;
-
+    private PlayerGold playerGold;
     void Start()
     {
         // RocketHP 스크립트를 가진 게임 오브젝트를 찾아서 rocketHP 변수에 할당합니다.
         rocketHP = GameObject.Find("Rocket").GetComponent<RocketHP>();
+        playerGold = GameObject.Find("Rocket").GetComponent<PlayerGold>();
     }
 
     void Update()
     {
         // 매 프레임마다 체력바를 업데이트합니다.
         UpdateHealthBar();
+        UpdateGold();
     }
 
     public void DamageRocket()
@@ -37,5 +40,10 @@ public class HealthBarScript : MonoBehaviour
     healthBarSlider.maxValue = maxHealth;
     healthBarSlider.value = currHealth;
 }
+    private void UpdateGold()
+    {
+        int currGold = playerGold.currentGold;
+        goldValueText.text = currGold.ToString();
+    }
 
 }

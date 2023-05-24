@@ -79,7 +79,7 @@ public class AIDetector : MonoBehaviour
     private void Update()
     {
         if (Target != null)
-        TargetVisible = CheckTargetVisible();
+            TargetVisible = CheckTargetVisible();
 
     }
 
@@ -105,7 +105,7 @@ public class AIDetector : MonoBehaviour
         }
         else if (Target != null)
         {
-            
+
             DetectIfOutOfRange();
             CheckIfPlayerInRange();
             Debug.Log("나감");
@@ -122,7 +122,7 @@ public class AIDetector : MonoBehaviour
             Debug.Log("탈출함"); // 디버그 메시지 출력
         }
     }
- //   skeletonAnimation.AnimationState.SetAnimation(0, "Attack", true);
+    //   skeletonAnimation.AnimationState.SetAnimation(0, "Attack", true);
     //타겟이 시야에 있는지 충돌 체크
     private void CheckIfPlayerInRange()
     {
@@ -130,11 +130,11 @@ public class AIDetector : MonoBehaviour
         Collider2D collision = Physics2D.OverlapCircle(transform.position, viewRadius, playerLayerMask);
         if (collision != null)
         {
-            
+
             Target = collision.transform;
             if (Target != null)
             {
- //               skeletonAnimation.Skeleton.FlipX = !skeletonAnimation.Skeleton.FlipX;
+                //               skeletonAnimation.Skeleton.FlipX = !skeletonAnimation.Skeleton.FlipX;
                 skeletonAnimation.AnimationState.SetAnimation(0, "Attack", true);
                 Vector2 TargetPos = Target.position;
                 GameObject thisObject = this.gameObject;
@@ -154,7 +154,8 @@ public class AIDetector : MonoBehaviour
                 nextTimeToFire = Time.time + 1 / FireRate;
                 shoot();
             }
-        }else
+        }
+        else
             skeletonAnimation.AnimationState.SetAnimation(0, "Idle", true);
     }
 
